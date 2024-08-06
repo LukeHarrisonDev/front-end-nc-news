@@ -11,12 +11,21 @@
 #root {
   max-width: 2500px;
   margin: 0 auto;
+  margin-top: 30px;
   text-align: center;
 }
 
+/* header {
+  position: fixed;
+  width: 100%;
+  margin-right: 20px;
+  top: 0;
+  left: 0;
+} */
+
 a {
   font-weight: 500;
-  color: #646cff;
+  color: black;
   text-decoration: inherit;
 }
 
@@ -41,7 +50,7 @@ nav {
   justify-content: center;
   border-bottom: double 15px;
   border-radius: 20px;
-  /* justify-content: space-around; */
+  justify-content: space-around;
 }
 
 ol {
@@ -82,6 +91,58 @@ li {
 
 p {
   margin: 5px;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+
+.article-title-container {
+  width: 50%;
+}
+
+.art-title {
+  font-weight: 500;
+  margin-bottom: 0px;
+}
+
+.art-topic {
+  position: absolute;
+  margin-top: 18.720px;
+  align-self: flex-end;
+}
+
+.topic-word {
+  font-weight: 400;
+}
+
+.art-author {
+  margin: 0;
+  margin-bottom: 13px;
+}
+
+.art-date-time {
+  margin-left: 0px;
+}
+
+.art-body {
+  text-align: justify;
+}
+
+.single-art-img {
+  max-width: 100%;
+  margin: 20px;
+  align-self: center;
+}
+
+#stock {
+  width: 30vw;
+  height: 20vw;
+  margin: 20px;
 }
 
 button {

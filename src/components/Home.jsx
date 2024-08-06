@@ -3,17 +3,14 @@ function Home() {
     return (
       <>
         <section>
-          <p>
-            [Stock Pic 1]
-          </p>
-          <p>
-            [Stock Pic 2]
-          </p>
+          <img id="stock" src="src/images/news-paper.jpg" />
+          <img id="stock" src="src/images/news-phone.jpg" />
         </section>
         <h2>Welcome to NC News</h2>
         <p>Ay Up, welcome tu' best News ar'icle website in' North</p>
+        <p>Click "All Articles" in' nav bar to go to ar'icles</p>
         <section>
-          [Grid of 4 Pictures relating to existing news articles]
+
         </section>
       </>
     )
