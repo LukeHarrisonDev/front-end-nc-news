@@ -11,10 +11,16 @@ export function fetchArticles() {
     })
 }
 
-export function fetchArticleById (articleId) {
+export function fetchArticleById(articleId) {
     return newsApi.get(`/articles/${articleId}`)
     .then((response) => {
-        console.log()
         return response.data.article
+    })
+}
+
+export function fetchCommentsByArticleId(articleId) {
+    return newsApi.get(`/articles/${articleId}/comments`)
+    .then((response) => {
+        return response.data.comments
     })
 }
