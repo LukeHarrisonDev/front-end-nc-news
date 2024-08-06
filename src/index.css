@@ -33,10 +33,37 @@ a:hover {
   color: #535bf2;
 }
 
+#stock {
+  width: 30vw;
+  height: 20vw;
+  margin: 20px;
+}
+
 h1 {
   font-size: 4.5em;
   line-height: 1.1;
   margin: 10px
+}
+
+h2 {
+  font-size: 2em
+}
+/* 
+h3 {
+  margin: 5px;
+} */
+
+h4 {
+  margin: 5px;
+  font-size: large;
+}
+
+h5 {
+  margin: 5px;
+}
+
+span {
+  font-size: medium;
 }
 
 .links {
@@ -60,6 +87,10 @@ ol {
   padding: 0px;
 }
 
+/* comments ol
+margin: 5px;
+max-width: 700px; */
+
 li {
   display: flex;
   flex-direction: column;
@@ -73,6 +104,15 @@ li {
   list-style-type: none;
   width: 300px;
   height: 385px;
+}
+
+.comment-card {
+  width: 100%;
+  justify-content: start;
+  height: auto;
+  background-color: rgb(187, 218, 247);
+  border: solid 4px rgb(103, 131, 255);
+  box-shadow: -5px 5px 10px hsla(216, 56%, 34%, 0.9);
 }
 
 .art-img {
@@ -139,12 +179,6 @@ article {
   align-self: center;
 }
 
-#stock {
-  width: 30vw;
-  height: 20vw;
-  margin: 20px;
-}
-
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -163,7 +197,7 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
-
+/* 
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
@@ -175,4 +209,4 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
-}
+} */
