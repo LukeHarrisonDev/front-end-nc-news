@@ -91,6 +91,11 @@ ol {
 margin: 5px;
 max-width: 700px; */
 
+#posted {
+  font-weight: 800;
+  color: green;
+}
+
 li {
   display: flex;
   flex-direction: column;
@@ -120,9 +125,31 @@ li {
   word-break: break-all;
 }
 
-#posted {
-  font-weight: 800;
+.delete-comment {
+  color: white;
+  position: absolute;
+  display: flex;
+  align-self: flex-end;
+  font-size: small;
+  padding: 3px;
+  border-radius: 10px;
+}
+
+.delete-comment-message {
+  font-size: small;
+  color: red;
+}
+.deleting {
+  font-size: large;
+  color: blue;
+}
+
+.deleted-message {
+  font-size: 80px;
+  font-weight: 900;
   color: green;
+  position: absolute;
+  display: flex;
 }
 
 .art-img {
