@@ -33,3 +33,7 @@ export function changeVote(articleId, voteAmount) {
 export function postComment(articleId, comment) {
     return newsApi.post(`articles/${articleId}/comments`, comment)
 }
+
+export function deleteComment(commentId) {
+    return newsApi.delete(`/comments/${commentId}`)
+}
