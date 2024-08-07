@@ -3,6 +3,7 @@ import { fetchCommentsByArticleId } from "../../api"
 import Lottie from "lottie-react"
 import loadingAnimation from "../animations/news-loading.json"
 import CommentCard from "./CommentCard"
+import PostComment from "./PostComment"
 
 function CommentsLists({singleArticle}) {
     const [comments, setComments] = useState([])
@@ -24,6 +25,7 @@ function CommentsLists({singleArticle}) {
     return (
         <>
             <h3>Comments</h3>
+            <PostComment comments={comments} setComments={setComments}/>
             <ol>
                 {comments.map((comment) => {
                     return <CommentCard key={comment.comment_id} comment={comment}/>
