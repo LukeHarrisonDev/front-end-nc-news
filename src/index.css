@@ -107,12 +107,22 @@ li {
 }
 
 .comment-card {
-  width: 100%;
+  width: 85%;
+  margin: 10px;
   justify-content: start;
   height: auto;
   background-color: rgb(187, 218, 247);
   border: solid 4px rgb(103, 131, 255);
   box-shadow: -5px 5px 10px hsla(216, 56%, 34%, 0.9);
+}
+
+.comment-card p {
+  word-break: break-all;
+}
+
+#posted {
+  font-weight: 800;
+  color: green;
 }
 
 .art-img {
@@ -203,6 +213,17 @@ article {
   border-top: 0;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#comment-box {
+  width: 70%;
+  margin-bottom: 10px;
 }
 
 button {
