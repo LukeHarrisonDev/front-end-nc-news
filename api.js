@@ -28,6 +28,8 @@ export function fetchCommentsByArticleId(articleId) {
 export function changeVote(articleId, voteAmount) {
     voteAmount = +voteAmount
     return newsApi.patch(`/articles/${articleId}`, {inc_votes: voteAmount})
-    .then((response) => {
-    })
+}
+
+export function postComment(articleId, comment) {
+    return newsApi.post(`articles/${articleId}/comments`, comment)
 }
