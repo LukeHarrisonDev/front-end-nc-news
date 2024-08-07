@@ -24,3 +24,10 @@ export function fetchCommentsByArticleId(articleId) {
         return response.data.comments
     })
 }
+
+export function changeVote(articleId, voteAmount) {
+    voteAmount = +voteAmount
+    return newsApi.patch(`/articles/${articleId}`, {inc_votes: voteAmount})
+    .then((response) => {
+    })
+}
