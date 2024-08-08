@@ -1,10 +1,13 @@
+import { useParams } from "react-router-dom"
 import ArticleList from "./ArticleList"
 
 function ArticleFilterProvider() {
 
+  const {topic} = useParams()
+
     return (
       <>
-        <ArticleList/>
+        <ArticleList topic={topic}/>
       </>
     )
   }
