@@ -11,8 +11,15 @@ export function fetchTopics() {
     })
 }
 
-export function fetchArticles(topic) {
-    return newsApi.get(`/articles`, {params: {topic}})
+export function fetchArticles(topicLink, sortByFilter, topicFilter) {
+    let topic
+    if(topicLink) {
+        topic = topicLink
+    } else if (topicFilter) {
+        topic = topicFilter
+    }
+    
+    return newsApi.get(`/articles`, {params: {topic, ...sortByFilter}})
     .then((response) => {
         return response.data.articles
     })
