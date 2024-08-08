@@ -4,14 +4,13 @@ import ArticleCard from "./ArticleCard"
 import Lottie from "lottie-react"
 import loadingAnimation from "../animations/news-loading.json"
 
-function ArticleList() {
-
+function ArticleList({topic}) {
   const [articles, setArticles] = useState([])
   const [isLoading, setisLoading] = useState(true)
 
   useEffect(() => {
     setisLoading(true)
-    fetchArticles()
+    fetchArticles(topic)
     .then((articles) => {
       setArticles(articles)
       setisLoading(false)
