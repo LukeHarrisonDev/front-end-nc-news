@@ -6,11 +6,14 @@ import CommentsLists from "./CommentsList"
 import ArticleVotes from "./ArticleVotes"
 import Lottie from "lottie-react"
 import loadingAnimation from "../animations/news-loading.json"
+import ErrorPage from "./ErrorPage"
 
 function SingleArticle() {
     const { article_id } = useParams()
     const [singleArticle, setSingleArticle] = useState({})
     const [isLoading, setIsLoading] = useState(true)
+    const [isError, setIsError] = useState(false)
+    const [error, setError] = useState({})
 
     useEffect(() => {
         setIsLoading(true)
@@ -19,11 +22,20 @@ function SingleArticle() {
             setSingleArticle(article)
             setIsLoading(false)
         })
+        .catch((error) => {
+            setIsLoading(false)
+            setIsError(true)
+            setError(error.response)
+        })
     }, [article_id])
 
     if(isLoading) {
         return <Lottie className="loading" animationData={loadingAnimation} loop={true}/>
-      }
+    }
+
+    if(isError) {
+        return <ErrorPage error={error}/>
+    }
 
     return (
         <>
