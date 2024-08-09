@@ -1,5 +1,6 @@
-import { useState, useEffect } from "react"
+import { useState, useEffect, useContext } from "react"
 import { deleteComment } from "../../api"
+import { UserContext } from "../contexts/UserContext"
 
 function DeleteComment({comment}) {
     const [isDeleted, setIsDeleted] = useState(false)
@@ -7,8 +8,9 @@ function DeleteComment({comment}) {
     const [isDeleting, setIsDeleting] = useState(false)
     const [isCurrentUser, setIsCurrentUser] = useState(false)
 
-    //// Temp Logged in User ////
-    const username = "cooljmessy"
+    const {loggedInUser} = useContext(UserContext)
+
+    const username = loggedInUser.username
 
     useEffect(() => {
         if(username === comment.author) {

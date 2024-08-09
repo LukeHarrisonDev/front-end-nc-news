@@ -11,7 +11,7 @@ function SortByFilter({setSortByFilter}) {
 
     return (
         <form>
-            <label htmlFor="sort-by-filter">Sort Articles by:</label>
+            <label className="sort-label" htmlFor="sort-by-filter">Sort Articles by:</label>
             <select id="sort-by-filter" onChange={selectHandler}>
                 <option value={JSON.stringify({sort_by: 'created_at'})}>Date: Newest to Oldest (Default)</option>
                 <option value={JSON.stringify({sort_by: 'created_at', order: 'asc'})}>Date: Oldest to Newest</option>

@@ -6,7 +6,7 @@ function ArticleCard({article}) {
   return (
     <Link to={`/articles/${article.article_id}`}>
       <li>
-        <h3>{article.title}</h3>
+        <h3 className="balsamiq">{article.title}</h3>
         <div className="art-card-format">
           <img className="art-img" src={article.article_img_url}/>
           <p>Votes: {article.votes}</p>
