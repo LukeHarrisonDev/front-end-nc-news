@@ -4,23 +4,29 @@ import ArticleCard from "./ArticleCard"
 import Lottie from "lottie-react"
 import loadingAnimation from "../animations/news-loading.json"
 
-function ArticleList({topic, sortByFilter, topicFilter}) {
+function ArticleList({topic, sortByFilter, topicFilter, setError, setIsError}) {
   const [articles, setArticles] = useState([])
-  const [isLoading, setisLoading] = useState(true)
+  const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
-    setisLoading(true)
+    setIsLoading(true)
     fetchArticles(topic, sortByFilter, topicFilter)
     .then((articles) => {
       setArticles(articles)
-      setisLoading(false)
+      setIsLoading(false)
     })
-  }, [sortByFilter, topicFilter])
+    .catch((error) => {
+      setIsLoading(false)
+      setIsError(true)
+      setError(error.response)
+  })
+  }, [sortByFilter, topicFilter, topic])
+
 
   if(isLoading) {
     return <Lottie className="loading" animationData={loadingAnimation} loop={true}/>
   }
-  
+
   return (
     <ol>
       {articles.map((article) => {
