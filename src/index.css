@@ -36,12 +36,25 @@ a:hover {
 }
 
 #stock {
+  border: double black 12px;
+  border-radius: 10px;
   width: 30vw;
   height: 20vw;
   margin: 20px;
 }
 
+.yellowtail {
+  font-family: "Yellowtail", cursive;
+  font-weight: 400;
+}
+
+.balsamiq {
+  font-family: "Balsamiq Sans", sans-serif;
+  font-weight: 600;
+}
+
 h1 {
+
   font-size: 4.5em;
   line-height: 1.1;
   margin: 10px
@@ -71,7 +84,7 @@ span {
 .links {
   margin: 10px;
   margin-bottom: 20px;
-  font-size: 23px;
+  font-size: 27px;
 }
 
 nav {

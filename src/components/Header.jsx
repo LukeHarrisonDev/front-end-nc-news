@@ -4,8 +4,8 @@ function Header() {
 
     return (
         <header>
-            <h1>NC News</h1>
-            <nav>
+            <h1 className="yellowtail">Luke's NC News</h1>
+            <nav className="balsamiq">
                 <Link to="/" className="links">Home</Link>
                 <Link to="/topics" className="links">Topics</Link>
                 <Link to="/articles" className="links">All Articles</Link>
