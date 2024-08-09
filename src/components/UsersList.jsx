@@ -1,18 +1,18 @@
 import { useState, useEffect } from "react"
+import { fetchUsers } from "../../api"
 import Lottie from "lottie-react"
 import loadingAnimation from "../animations/news-loading.json"
-import { fetchTopics } from "../../api"
-import TopicCard from "./TopicCard"
+import UserCard from "./UserCard"
 
-function Topics() {
-    const [topics, setTopics] = useState([])
+function UsersList() {
+    const [users, setUser] = useState({})
     const [isLoading, setisLoading] = useState(true)
 
     useEffect(() => {
         setisLoading(true)
-        fetchTopics()
-        .then((topics) => {
-            setTopics(topics)
+        fetchUsers()
+        .then((users) => {
+            setUser(users)
             setisLoading(false)
         })
     }, [])
@@ -23,11 +23,11 @@ function Topics() {
 
     return (
         <ol>
-            {topics.map((topic) => {
-                return <TopicCard key={topic.slug} topic={topic}/>
+            {users.map((user) => {
+                return <UserCard key={user.username} user={user}/>
             })}
         </ol>
     )
 }
 
-export default Topics
+export default UsersList

@@ -5,7 +5,7 @@ function TopicCard({topic}) {
     return (
         <Link to={`/topics/${topic.slug}`}>
             <li className="topic-card">
-                <h3>{upperCaseFirstLetter(topic.slug)}</h3>
+                <h3 className="balsamiq">{upperCaseFirstLetter(topic.slug)}</h3>
                 <p>{topic.description}</p>
             </li>
         </Link>

@@ -7,12 +7,12 @@ function Header() {
             <h1 className="yellowtail">Luke's NC News</h1>
             <nav className="balsamiq">
                 <Link to="/" className="links">Home</Link>
+                <Link to="/users" className="links">Users</Link>
                 <Link to="/topics" className="links">Topics</Link>
                 <Link to="/articles" className="links">All Articles</Link>
-                {/* <h3>Users</h3> */}
             </nav>
         </header>
     )
-  }
-  
-  export default Header
+}
+
+export default Header

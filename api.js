@@ -11,6 +11,13 @@ export function fetchTopics() {
     })
 }
 
+export function fetchUsers() {
+    return newsApi.get("/users")
+    .then((response) => {
+        return response.data.users
+    })
+}
+
 export function fetchArticles(topicLink, sortByFilter, topicFilter) {
     let topic
     if(topicLink) {
