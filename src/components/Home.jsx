@@ -11,7 +11,7 @@ function Home() {
       </section>
       <h2 className='balsamiq'>Welcome to NC News</h2>
       <p>Ay Up, welcome tu' best News ar'icle website in' North</p>
-      <p>Click "All Articles" in' nav bar to go to ar'icles</p>
+      <p>Click "Articles" in' nav bar to go to all o' ar'icles</p>
       <section>
 
       </section>
