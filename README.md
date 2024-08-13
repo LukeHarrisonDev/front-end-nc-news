@@ -1,21 +1,22 @@
 # Luke's NC News Full Stack Project
 
-Welcome to my Full Stack project -
-https://lukesncnews.netlify.app/
-
 ## The Project
 
-The site utilises my own Back End API to access development data. I then created an interactive news website where you can use filters, select topics, login, and post/delete comments.
+Welcome, you've found the repository to the Frontend of my NC-News project where you can display news articles and filter them by topic, sort them in various way, as well as login, view and vote on individual articles, post and delete comments and more, you can view the web app by clicking the link below (When making a request to the API for the first time, please be patient, it's hosted using a free service)
 
-The API can be found here -
-https://nc-news-4-life.onrender.com/api
+https://lukesncnews.netlify.app/
 
-Or you can view the GitHub Repo -
+The site utilises my own Backend API to access development data.
+Click the link below to view the GitHub repository for the backend.
+
 https://github.com/LukeHarrisonDev/nc-news
+
+To view a list of available endpoints on the API you can follow this:-
+https://nc-news-4-life.onrender.com/api
 
 ## Setup
 
-To view the Repo, follow these instructions in your terminal-
+To run the Frontend repository locally, follow these instructions in your terminal-
 
 1. git clone https://github.com/LukeHarrisonDev/front-end-nc-news
 2. cd front-end-nc-news
