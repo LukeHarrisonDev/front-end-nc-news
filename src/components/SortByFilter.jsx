@@ -3,7 +3,7 @@ import { useSearchParams } from "react-router-dom"
 function SortByFilter({setSortByFilter}) {
 
     const [searchParams, setSearchParams] = useSearchParams()
-    
+
     function selectHandler(e) {
         setSortByFilter(JSON.parse(e.target.value))
         setSearchParams(JSON.parse(e.target.value))

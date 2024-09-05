@@ -25,7 +25,6 @@ export function fetchArticles(topicLink, sortByFilter, topicFilter) {
     } else if (topicFilter) {
         topic = topicFilter
     }
-    
     return newsApi.get(`/articles`, {params: {topic, ...sortByFilter}})
     .then((response) => {
         return response.data.articles
