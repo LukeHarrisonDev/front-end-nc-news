@@ -8,6 +8,7 @@ import SingleArticle from "./components/SingleArticle"
 import Topics from "./components/Topics"
 import ErrorPage from "./components/ErrorPage"
 import UsersList from "./components/UsersList"
+import UserLogin from "./components/UserLogin"
 
 function App() {
 
@@ -15,20 +16,19 @@ function App() {
     const isLoggedIn = Object.keys(loggedInUser).length > 0
 
     return (
-        <div>
         <UserContext.Provider value= {{loggedInUser, setLoggedInUser, isLoggedIn}}>
-        <Header/>
-        <Routes>
-            <Route path="*" element={<ErrorPage/>}/>
-            <Route path="/" element={<Home/>}/>
-            <Route path="/articles" element={<ArticleFilterProvider/>}/>
-            <Route path="/articles/:article_id" element={<SingleArticle/>}/>
-            <Route path="/topics" element={<Topics/>}/>
-            <Route path="/topics/:topic" element={<ArticleFilterProvider/>}/>
-            <Route path="/users" element={<UsersList/>}/>
-        </Routes>
+            <Header/>
+            <Routes>
+                <Route path="*" element={<ErrorPage/>}/>
+                <Route path="/" element={<Home/>}/>
+                <Route path="/articles" element={<ArticleFilterProvider/>}/>
+                <Route path="/articles/:article_id" element={<SingleArticle/>}/>
+                <Route path="/topics" element={<Topics/>}/>
+                <Route path="/topics/:topic" element={<ArticleFilterProvider/>}/>
+                {/* <Route path="/users" element={<UsersList/>}/> */}
+                <Route path="/users" element={<UserLogin/>}/>
+            </Routes>
         </UserContext.Provider>
-        </div>
     )
 }
 

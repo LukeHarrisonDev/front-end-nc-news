@@ -17,7 +17,7 @@ function UserCard({user}) {
         <li className="user-card">
             <h3 className="balsamiq">{user.username}</h3>
             <img className="avatar" src={user.avatar_url}/>
-            <button onClick={handleClick} className="login-button">Log {loggedInUser.username === user.username ? "out" : "in"}</button>
+            <button onClick={handleClick} className="login-button">Log {isLoggedIn ? "out" : "in"}</button>
         </li>
     )
 }
