@@ -3,10 +3,14 @@ import { UserContext } from "../contexts/UserContext"
 
 function UserCard({user}) {
 
-    const {setLoggedInUser, loggedInUser} = useContext(UserContext)
+    const {setLoggedInUser, loggedInUser, isLoggedIn} = useContext(UserContext)
 
     function handleClick() {
-        setLoggedInUser(user)
+        if (!isLoggedIn) {
+            setLoggedInUser(user)
+        } else {
+            setLoggedInUser({})
+        }
     }
 
     return (
