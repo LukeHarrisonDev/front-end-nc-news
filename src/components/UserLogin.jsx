@@ -41,7 +41,7 @@ function UserLogin() {
                 <label htmlFor="username-input">Username: </label>
                 <input id="username-input" onChange={handleUsernameChange} value={usernameInput} required/>
                 <label htmlFor="password-input">Password: </label>
-                <input id="password-input" onChange={handlePasswordChange} value={passwordInput} required/>
+                <input type="password" id="password-input" onChange={handlePasswordChange} value={passwordInput} required/>
                 <button type="submit" id="login-button">Login</button>
             </form>
     )

@@ -6,6 +6,17 @@ Welcome, you've found the repository to the Frontend of my NC-News project where
 
 https://lukesncnews.netlify.app/
 
+To login, please use any of the following usernames:
+
+1. cooljmessy
+2. grumpy19
+3. happyamy2016
+4. jessjelly
+5. tickle122
+6. weegembump
+
+Password: password
+
 The site utilises my own Backend API to access development data.
 Click the link below to view the GitHub repository for the backend.
 
