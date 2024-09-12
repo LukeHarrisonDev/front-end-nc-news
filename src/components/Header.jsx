@@ -15,7 +15,7 @@ function Header() {
             <h1 className="yellowtail">Luke's NC News</h1>
             <nav className="balsamiq">
                 <Link to="/" className="links">Home</Link>
-                <Link to="/users" className="links">Login</Link>
+                <Link to="/users" className="links">{isLoggedIn ? "Account" : "Login"}</Link>
                 <Link to="/topics" className="links">Topics</Link>
                 <Link to="/articles" className="links">Articles</Link>
             </nav>
