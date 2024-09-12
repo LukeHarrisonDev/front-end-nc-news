@@ -183,6 +183,11 @@ li {
   box-shadow: -5px 5px 10px hsla(216, 56%, 34%, 0.9);
 }
 
+#fade-out{
+  animation-name: fade-out;
+  animation-duration: 3s;
+}
+
 .comment-card p {
   word-break: break-all;
 }
@@ -381,6 +386,17 @@ button {
 button:hover {
   border-color: #646cff;
 }
+
+.fade-out {
+  /* width: 85%; */
+
+}
+
+@keyframes fade-out {
+  0% {opacity: 1;}
+  100% {opacity: 0;}
+}
+
 /* button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;

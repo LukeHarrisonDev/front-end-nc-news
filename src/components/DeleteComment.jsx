@@ -2,8 +2,7 @@ import { useState, useEffect, useContext } from "react"
 import { deleteComment } from "../../api"
 import { UserContext } from "../contexts/UserContext"
 
-function DeleteComment({comment}) {
-    const [isDeleted, setIsDeleted] = useState(false)
+function DeleteComment({comment, setIsDeleted}) {
     const [isNotDeleted, setIsNotDeleted] = useState(false)
     const [isDeleting, setIsDeleting] = useState(false)
     const [isCurrentUser, setIsCurrentUser] = useState(false)
@@ -22,8 +21,8 @@ function DeleteComment({comment}) {
         setIsDeleting(true)
         deleteComment(comment.comment_id)
         .then(() => {
-            setIsDeleting(false)
             setIsDeleted(true)
+            setIsDeleting(false)
         })
         .catch(() => {
             setIsNotDeleted(true)
@@ -39,7 +38,7 @@ function DeleteComment({comment}) {
             {isDeleting ? <p className="deleting">deleting...</p> : null}
             {isCurrentUser ? <button onClick={handleClick} className="delete-comment">Delete Comment</button> : null}
             {isNotDeleted ? <p className="delete-comment-message">Comment not deleted, try again</p> : null}
-            {isDeleted ? <p className="deleted-message">DELETED!</p> : null}
+            {/* {isDeleted ? <p className="deleted-message">DELETED!</p> : null} */}
         </>
     )
 
