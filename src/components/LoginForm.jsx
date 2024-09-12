@@ -30,6 +30,8 @@ function LoginForm() {
             users.forEach((user) => {
                 if(usernameInput === user.username && passwordInput === "password") {
                     setLoggedInUser(user)
+                    // console.log(user)
+                    window.localStorage.setItem("user", JSON.stringify(user))
                 } else {
                     setErrorMessage("Invalid Username/Password, please try again")
                 }

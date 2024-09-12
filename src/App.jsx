@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { UserContext } from "./contexts/UserContext"
 import Header from "./components/Header"
 import Home from "./components/Home"
@@ -10,9 +10,19 @@ import ErrorPage from "./components/ErrorPage"
 import User from "./components/User"
 
 function App() {
-
+    
     const [loggedInUser, setLoggedInUser] = useState({})
+    
     const isLoggedIn = Object.keys(loggedInUser).length > 0
+    
+    useEffect(() => {
+        if (!isLoggedIn) {
+            const user = localStorage.getItem("user")
+            if (user !== null) {
+                setLoggedInUser(JSON.parse(user))
+            }
+        }
+    }, [])
 
     return (
         <UserContext.Provider value= {{loggedInUser, setLoggedInUser, isLoggedIn}}>

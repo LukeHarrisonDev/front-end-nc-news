@@ -7,6 +7,7 @@ function LogoutForm() {
 
     function handleLogout() {
         setLoggedInUser({})
+        localStorage.removeItem("user")
     }
 
     return (
@@ -14,6 +15,5 @@ function LogoutForm() {
             <button type="submit" id="logout-button">Logout</button>
         </form>
     )
-
 }
 export default LogoutForm
