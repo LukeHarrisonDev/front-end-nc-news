@@ -28,7 +28,7 @@ function ArticleVotes({singleArticle}) {
             <span className="art-votes">{optimisticVotes} votes</span>
             <button value={1} onClick={handleVote} className="vote-up">↑</button>
             <button value={-1} onClick={handleVote} className="vote-down">↓</button>
-            <span>{errorMessage}</span>
+            <span className="red">{errorMessage}</span>
         </div>
     )
 }

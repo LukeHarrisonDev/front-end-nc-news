@@ -33,6 +33,10 @@
   color: green;
 }
 
+.red {
+  color: red;
+}
+
 #welcome-card {
   display: flex;
   flex-direction: column;

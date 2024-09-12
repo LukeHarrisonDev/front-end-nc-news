@@ -8,6 +8,7 @@ function LoginForm() {
     const [isLoading, setisLoading] = useState(false)
     const [usernameInput, setUsernameInput] = useState("")
     const [passwordInput, setPasswordInput] = useState("")
+    const [errorMessage, setErrorMessage] = useState("")
 
     const {setLoggedInUser} = useContext(UserContext)
 
@@ -29,22 +30,34 @@ function LoginForm() {
             users.forEach((user) => {
                 if(usernameInput === user.username && passwordInput === "password") {
                     setLoggedInUser(user)
+                } else {
+                    setErrorMessage("Invalid Username/Password, please try again")
                 }
             })
             setisLoading(false)
         })
     }
-    
+
     return (
             <form onSubmit={handleLogin}>
-                <label htmlFor="username-input">Username: <span className="req">*</span></label>
-                <input id="username-input" onChange={handleUsernameChange} value={usernameInput} required/>
-                <label htmlFor="password-input">Password: <span className="req">*</span></label>
-                <input type="password" id="password-input" onChange={handlePasswordChange} value={passwordInput} required/>
+                <label htmlFor="username-input">Username: <span className="red">*</span></label>
+                <input id="username-input" onChange={handleUsernameChange} onFocus={() => {setErrorMessage("")}} value={usernameInput} required/>
+                <label htmlFor="password-input">Password: <span className="red">*</span></label>
+                <input type="password" id="password-input" onChange={handlePasswordChange} onFocus={() => {setErrorMessage("")}} value={passwordInput} required/>
+                <p className="red">{errorMessage}</p>
                 <button type="submit" id="login-button">Login</button>
+                <p>When logging in, you can use the following users:</p>
+                <section className="bold">
+                    <p>cooljmessy</p>
+                    <p>grumpy19</p>
+                    <p>happyamy2016</p>
+                    <p>jessjelly</p>
+                    <p>tickle122</p>
+                    <p>weegembump</p>
+                </section>
+                    <p>The password is "<span className="green">password</span>", (very secure)</p>
             </form>
     )
-
 }
 
 export default LoginForm
