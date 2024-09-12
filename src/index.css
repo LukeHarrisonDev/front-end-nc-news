@@ -25,6 +25,14 @@
   left: 0;
 } */
 
+.bold {
+  font-weight: bolder;
+}
+
+.green {
+  color: green;
+}
+
 #welcome-card {
   display: flex;
   flex-direction: column;
