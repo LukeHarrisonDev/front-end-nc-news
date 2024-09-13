@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { formatDate, formatTime } from "../utils/date-and-time"
 import DeleteComment from "./DeleteComment"
 
@@ -9,7 +9,7 @@ function CommentCard({comment}) {
     
     return (
         <>
-            {isDeleted ? null
+            {isDeleted ? <p className="deleted-message">DELETED!</p>
             : 
             <li id={id} className="comment-card">
                 <hgroup>
@@ -20,8 +20,6 @@ function CommentCard({comment}) {
                 <p>{comment.body}</p>
                 <DeleteComment comment={comment} setIsDeleted={setIsDeleted}/>
             </li>
-            //// Come back to this ////
-            // {/* {isDeleted ? setId("fade-out") : null} */}
             }
         </>
     )

@@ -38,7 +38,6 @@ function DeleteComment({comment, setIsDeleted}) {
             {isDeleting ? <p className="deleting">deleting...</p> : null}
             {isCurrentUser ? <button onClick={handleClick} className="delete-comment">Delete Comment</button> : null}
             {isNotDeleted ? <p className="delete-comment-message">Comment not deleted, try again</p> : null}
-            {/* {isDeleted ? <p className="deleted-message">DELETED!</p> : null} */}
         </>
     )
 
